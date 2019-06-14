@@ -30,6 +30,18 @@ router.get('/mazda', function (req, res, next){
 	auto.foto="https://static.cargurus.com/images/site/2018/11/02/00/41/2019_mazda_cx-3_grand_touring_fwd-pic-4524241946458914224-640x480.jpeg";
 	data.autos.push(auto);
 
+	auto.nombre="Mazda CX-3";
+	auto.foto="https://static.cargurus.com/images/site/2018/11/02/00/41/2019_mazda_cx-3_grand_touring_fwd-pic-4524241946458914224-640x480.jpeg";
+	data.autos.push(auto);
+
+	auto.nombre="Mazda CX-3";
+	auto.foto="https://static.cargurus.com/images/site/2018/11/02/00/41/2019_mazda_cx-3_grand_touring_fwd-pic-4524241946458914224-640x480.jpeg";
+	data.autos.push(auto);
+
+	auto.nombre="Mazda CX-3";
+	auto.foto="https://static.cargurus.com/images/site/2018/11/02/00/41/2019_mazda_cx-3_grand_touring_fwd-pic-4524241946458914224-640x480.jpeg";
+	data.autos.push(auto);
+
 	console.log(data);	
 
 	res.render("./galeria/mazda", data);
