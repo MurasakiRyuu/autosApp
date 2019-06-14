@@ -1,12 +1,19 @@
 var express = require('express');
 var router = express.Router();
 
+
+var mongoose=require('mongoose');
+var Mazda=require('../models/autos');
+
+
 router.get('/mazda', function (req, res, next){
+
+
 //	rest.send("galeria mazda");
 
 //	var data=[{}]; // arreglo de onjetos JSON
 
-	var data={autos:[]}; 
+/*	var data={autos:[]}; 
 	var auto={};
 
 	auto=null;
@@ -41,10 +48,20 @@ router.get('/mazda', function (req, res, next){
 	auto.nombre="Mazda CX-3";
 	auto.foto="https://static.cargurus.com/images/site/2018/11/02/00/41/2019_mazda_cx-3_grand_touring_fwd-pic-4524241946458914224-640x480.jpeg";
 	data.autos.push(auto);
+*/
 
-	console.log(data);	
+	Mazda.find({}, function(err, data){
+	//console.log(data);	
+
+	var x={autos:data};
+
+	res.render("./galeria/mazda", x);
+	});
+/*	console.log(data);	
 
 	res.render("./galeria/mazda", data);
+
+	*/
 });
 
 
